@@ -16,7 +16,7 @@ https://roadmap.sh/projects/fitness-workout-tracker
 - WorkoutPlan
     - id
     - user (one-to-many relationship to User table)
-    - exercises (many-to-many relationship to Exercise table)
+    - exercises (many-to-many relationship to Exercise table) (with helper table)
     - comments (one-to-many relationship to Comment table)
     - schedule-datetime
     - status (pending, done)
