@@ -160,4 +160,16 @@ export class DB {
             throw new Error(error.message ?? "Unknown error while fetching plans.");
         }
     }
+
+    async getReport(userId: string) {
+        try {
+            const [response] = await this.db.query(`SELECT * FROM WorkoutPlans WHERE user = ? AND schedule_time < CURRENT_DATE();`, [
+                userId
+            ]);
+            console.log(response)
+            return (response as WorkoutPlan[]).sort((a, b) => new Date(a.schedule_time).getTime() - new Date(b.schedule_time).getTime());
+        } catch (error: any) {
+            throw new Error(error.message ?? "Unknown error while fetching plans.");
+        }
+    }
 }
