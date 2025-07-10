@@ -12,5 +12,5 @@ export const createToken = (username: string, userId: string) => {
 };
 
 export const verify = (token: string) => {
-    return jwt.verify(token, process.env.JWT_SECRET!, (err) => !Boolean(err));
+    return jwt.verify(token, process.env.JWT_SECRET!);
 }
