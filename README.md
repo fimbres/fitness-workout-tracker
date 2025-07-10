@@ -35,6 +35,5 @@ https://roadmap.sh/projects/fitness-workout-tracker
     - POST
     - GET
     - DELETE
-        - /comment (POST)
         - /schedule (POST)
-        - /report (GET)
+- /report (GET)
