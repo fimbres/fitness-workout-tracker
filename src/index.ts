@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 import { authRouter } from "./routes/auth";
 import { workoutPlanRouter } from "./routes/workout-plan";
+import { reportRouter } from "./routes/report";
 
 import { DB } from "./utils/db";
 
@@ -17,6 +18,7 @@ app.use(express.json());
 
 app.use('/auth', authRouter);
 app.use('/workout-plan', workoutPlanRouter);
+app.use('/report', reportRouter);
 
 app.listen(3000, () => {
     console.log("Listening on port 3000...");
